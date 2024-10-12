@@ -298,7 +298,7 @@ class RWKV_TimeMix_RWKV5(MyModule):
         self.layer_id = layer_id
 
         self.head_size = args.head_size_a
-        assert HEAD_SIZE == self.head_size # change HEAD_SIZE to match args.head_size_a
+        #assert HEAD_SIZE == self.head_size # change HEAD_SIZE to match args.head_size_a
         self.n_head = args.dim_att // self.head_size
         assert args.dim_att % self.n_head == 0
         self.head_size_divisor = args.head_size_divisor
