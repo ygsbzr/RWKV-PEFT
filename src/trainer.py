@@ -105,6 +105,7 @@ class train_callback(pl.Callback):
                 if len(args.wandb) > 0:
                     print("Login to wandb...")
                     import wandb
+                    wandb.login()
                     wandb.init(
                         project=args.wandb,
                         name=args.run_name + " " + args.my_timestamp,
